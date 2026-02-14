@@ -30,7 +30,12 @@ Now I don't need to type my password!
 Tiny change for silent commit
 
 Step 2: Test your Speed
-W
-    Close any Magit windows you have open (q usually quits Magit windows, or use C-x 0).
 
-    Press C-x g
+Summary of your new Superpowers:
+
+    M-x magit-status Press C-x g: Open the dashboard.
+    s: Stage a file (add).
+    u: Unstage a file (undo add).
+    c c: Start a commit.
+    C-c C-c: Finish the commit.
+    P p: Push.
