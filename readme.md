@@ -29,4 +29,8 @@ Now I don't need to type my password!
 
 Tiny change for silent commit
 
-Magit is running
+Step 2: Test your Speed
+W
+    Close any Magit windows you have open (q usually quits Magit windows, or use C-x 0).
+
+    Press C-x g
