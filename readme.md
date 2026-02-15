@@ -24,7 +24,6 @@ Windows (Splitting the Screen)
 The "Do Anything" Command
 
     Alt + x (M-x): Run a command by name (like load-theme, eshell, etc.).
-
 Now I don't need to type my password!
 
 Tiny change for silent commit
