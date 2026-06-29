@@ -1,0 +1,78 @@
+Phase 1: The Local Setup
+
+1. Initialize the Repository
+
+    Open your /Pycal folder in Emacs.
+
+    Press C-x g.
+
+    Emacs asks to create a repository. Press y.
+
+2. Make your First Local Commit
+
+    Move your cursor over your untracked files (e.g., main.py).
+
+    Press s to stage them.
+
+    Press c c to open the commit window.
+
+    Type your message: Initial commit.
+
+    Press C-c C-c to save the commit.
+
+3. Rename the Branch to 'main' (The Pre-emptive Strike)
+Let's fix the naming issue before it causes problems!
+
+    In Magit, press b, then m (Rename branch).
+
+    If it asks which branch, press Enter (defaults to master).
+
+    Type main.
+
+    Emacs trick: If it says [No match], press C-j instead of Enter to force it to accept the name.
+
+Phase 2: The GitHub Handshake
+
+1. Create the Cloud Repo (In your Browser)
+
+    Go to GitHub.com -> Click New Repository.
+
+    Name it Pycal.
+
+    CRITICAL STEP: Leave the repository completely empty. Do NOT check "Add a README file" or ".gitignore". By keeping it perfectly blank, you avoid having to "Force Push" ever again!
+
+    Click Create repository and copy the HTTPS link.
+
+2. Link Emacs to GitHub
+
+    Back in your Magit dashboard, press M (Shift + m), then a (Add remote).
+
+    Remote name: Type origin and press Enter.
+
+    Remote URL: Paste the GitHub link and press Enter.
+
+3. The First Push
+
+    Press P (Shift + p), then u (Push and set upstream).
+
+    Press Enter to accept origin/main.
+
+    (If prompted for a password, paste your GitHub Personal Access Token).
+
+Phase 3: The Daily Grind (Making a Second Commit)
+
+Once the setup above is done, this is the only thing you will ever do day-to-day. Let's say you just wrote some new code in Pycal/main.py.
+
+    Save your file: C-x C-s.
+
+    Open Magit: C-x g.
+
+    Stage the change: Move your cursor to main.py under "Unstaged changes" and press s.
+
+    Commit the change: Press c c, type a message like Added addition function, then press C-c C-c.
+
+    Push to GitHub: Press P (Shift + p), then p (Push to origin).
+
+    Pro-Tip on Passwords: If Emacs constantly asks for your Personal Access Token every time you push, you can tell Git to remember it. Open your Eshell and run this command once:
+    git config --global credential.helper store
+    The next time you paste your token, Git will save it permanently so you never have to copy-paste it again!
